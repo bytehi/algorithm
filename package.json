@@ -1,0 +1,19 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vitest": "^0.23.2",
+    "vue-tsc": "^0.40.13"
+  }
+}
