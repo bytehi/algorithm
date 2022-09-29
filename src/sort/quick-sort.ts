@@ -1,3 +1,5 @@
+import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
+
 /**
  * 快速排序
  *
@@ -20,7 +22,7 @@
 
 
 /**
- * 快速排序 使用splice
+ * 快速排序 - 使用splice
  * @param arr
  * @returns
  */
@@ -47,20 +49,9 @@ export function quickSort1(arr: number[]): number[] {
   return quickSort1(left).concat([midValue], quickSort1(right))
 }
 
-// 功能测试
-const arr1 = [9, 3, 4, 8, 5, 2, 1, 7, 6];
-console.log('排序结果: ', quickSort1(arr1))
-
-
-// 性能测试
-const arr = []
-for (let i = 10 * 10000; i > 0; i--) {
-    arr.push(i)
-}
-console.time('排序耗时')
-quickSort1(arr) // 55ms
-console.timeEnd('排序耗时')
-console.log('—————————————— quickSort1 ——————————————')
+testSort(quickSort1)
+testSortTiming(quickSort1)
+testSortCountTiming(quickSort1)
 
 
 
@@ -93,17 +84,6 @@ export function quickSort2(arr: number[]): number[] {
   return quickSort2(left).concat([midValue], quickSort2(right))
 }
 
-// 功能测试
-const arr3 = [9, 3, 4, 8, 5, 2, 1, 7, 6];
-console.log('排序结果: ', quickSort2(arr3))
-
-
-// 性能测试
-const arr4 = []
-for (let i = 10 * 10000; i > 0; i--) {
-  arr4.push(i)
-}
-console.time('排序耗时')
-quickSort2(arr4) // 55ms
-console.timeEnd('排序耗时')
-console.log('—————————————— quickSort2 ——————————————')
+testSort(quickSort2)
+testSortTiming(quickSort2)
+testSortCountTiming(quickSort2)

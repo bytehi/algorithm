@@ -1,7 +1,8 @@
+import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
+
 /**
  * 归并排序
  */
-
 export function mergeSort(arr: number[]): number[] {
   const len = arr.length
   if (len < 2) return arr
@@ -35,7 +36,6 @@ function merge(left: number[], right: number[]): number[] {
 }
 
 
-const arr = [9, 3, 4, 8, 5, 2, 1, 7, 6];
-const ret = mergeSort(arr)
-console.log('排序结果: ', ret)
-console.log('—————————————— mergeSort ——————————————')
+testSort(mergeSort)
+testSortTiming(mergeSort)
+testSortCountTiming(mergeSort)

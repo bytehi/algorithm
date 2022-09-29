@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { insertSort } from '../src/basic/sort/insertSort'
+import { insertSort } from '../../src/sort/insert-sort'
 
 describe('插入排序', () => {
   test('正常情况', () => {

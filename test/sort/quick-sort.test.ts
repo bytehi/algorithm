@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest'
-import { quickSort1, quickSort2 } from '../src/basic/sort/quickSort'
+import { quickSort1, quickSort2 } from '../../src/sort/quick-sort'
 
 describe('快速排序', () => {
   test('正常情况', () => {
