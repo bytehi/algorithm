@@ -1,5 +1,5 @@
 {
-  "name": "vite-project",
+  "name": "Algorithm",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,8 +7,7 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest",
-    "coverage": "vitest run --coverage"
+    "test": "vitest"
   },
   "devDependencies": {
     "typescript": "^4.8.3",

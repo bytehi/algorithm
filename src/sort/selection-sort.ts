@@ -1,5 +1,4 @@
-import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
-
+import { createRandomArray, getSortTiming } from '@/utils'
 /**
  * 选择排序
  * @param arr
@@ -24,6 +23,5 @@ export function selectionSort(arr: number[]): number[] {
   return arr;
 }
 
-testSort(selectionSort)
-testSortTiming(selectionSort)
-// testSortCountTiming(selectionSort)
+const arr = createRandomArray(1 * 10000)
+getSortTiming(arr, selectionSort)

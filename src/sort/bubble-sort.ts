@@ -1,5 +1,3 @@
-import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
-
 /**
  * 冒泡排序
  * @param arr
@@ -18,7 +16,3 @@ export function bubbleSort(arr: number[]): number[] {
   }
   return arr
 }
-
-testSort(bubbleSort)
-testSortTiming(bubbleSort)
-// testSortCountTiming(bubbleSort)

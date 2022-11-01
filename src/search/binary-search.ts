@@ -1,5 +1,4 @@
-import { testSearch, testSearchTiming, testSearchCountTiming } from "../utils/test"
-
+import { createRandomArray, getSearchTiming } from '@/utils/index'
 /**
  * 二分查找法
  * @description 方案1 循环
@@ -28,11 +27,6 @@ export function binarySearch1(arr: number[], target: number): number {
   }
   return -1
 }
-
-testSearch(binarySearch1)
-testSearchTiming(binarySearch1)
-testSearchCountTiming(binarySearch1)
-
 
 
 /**
@@ -71,7 +65,7 @@ export function binarySearch2(arr: number[], target: number, startIndex?:number,
   }
 }
 
-testSearch(binarySearch2)
-testSearchTiming(binarySearch2)
-testSearchCountTiming(binarySearch2)
+
+const arr = createRandomArray(100 * 10000)
+getSearchTiming(arr, 999, binarySearch1)
 

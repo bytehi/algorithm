@@ -1,6 +1,3 @@
-
-import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
-
 /**
  * 插入排序
  * @param arr
@@ -22,7 +19,3 @@ export function insertSort(arr: number[]): number[] {
   }
   return arr
 }
-
-testSort(insertSort)
-testSortTiming(insertSort)
-testSortCountTiming(insertSort)

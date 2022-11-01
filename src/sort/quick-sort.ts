@@ -1,5 +1,3 @@
-import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
-
 /**
  * 快速排序
  *
@@ -22,7 +20,8 @@ import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
 
 
 /**
- * 快速排序 - 使用splice
+ * 快速排序
+ * @description 使用splice
  * @param arr
  * @returns
  */
@@ -49,14 +48,10 @@ export function quickSort1(arr: number[]): number[] {
   return quickSort1(left).concat([midValue], quickSort1(right))
 }
 
-testSort(quickSort1)
-testSortTiming(quickSort1)
-testSortCountTiming(quickSort1)
-
-
 
 /**
- * 快速排序 slice
+ * 快速排序
+ * @description 使用slice
  * @param arr
  * @returns
  */
@@ -80,10 +75,5 @@ export function quickSort2(arr: number[]): number[] {
       }
     }
   }
-
   return quickSort2(left).concat([midValue], quickSort2(right))
 }
-
-testSort(quickSort2)
-testSortTiming(quickSort2)
-testSortCountTiming(quickSort2)

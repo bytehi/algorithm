@@ -1,5 +1,3 @@
-import { testSort, testSortTiming, testSortCountTiming } from "../utils/test"
-
 /**
  * 归并排序
  */
@@ -34,8 +32,3 @@ function merge(left: number[], right: number[]): number[] {
   }
   return result;
 }
-
-
-testSort(mergeSort)
-testSortTiming(mergeSort)
-testSortCountTiming(mergeSort)
